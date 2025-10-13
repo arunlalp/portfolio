@@ -1,9 +1,11 @@
 :root{
-  --bg: #f7fafc;
-  --card: #ffffff;
-  --muted: #526069;
-  --accent: #0ea5b7;
-  --text: #071422;
+  /* Warm white theme */
+  --bg: #fffaf5; /* very light warm cream */
+  --card: #fffefc; /* slightly off-white card */
+  --muted: #6b6b63; /* warm gray for secondary text */
+  --accent: #d97706; /* warm amber accent */
+  --accent-2: #fb923c; /* lighter accent for gradients */
+  --text: #251814; /* deep warm brown for primary text */
   --radius: 10px;
   --max-width: 980px;
   --gap: 1.25rem;
@@ -24,8 +26,8 @@ body{
 .brand{font-weight:700;color:var(--text);text-decoration:none}
 .nav{display:flex;gap:1rem;align-items:center}
 .nav a{color:var(--muted);text-decoration:none;padding:.35rem .5rem;border-radius:6px}
-.nav a:hover{color:var(--text);background:rgba(2,6,23,0.03)}
-.resume-btn{background:linear-gradient(90deg,var(--accent),#7c3aed);color:#fff; padding:.5rem .7rem;border-radius:8px;font-weight:600}
+.nav a:hover{color:var(--text);background:rgba(37,24,20,0.04)}
+.resume-btn{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff; padding:.5rem .7rem;border-radius:8px;font-weight:600}
 .nav-toggle{display:none;background:transparent;border:0;color:var(--text);font-size:1.25rem}
 
 .hero{padding:3rem 0;text-align:center}
@@ -33,9 +35,9 @@ body{
 .tagline{color:var(--muted);margin-bottom:0.5rem}
 .contact-inline{color:var(--muted);margin-bottom:1rem}
 .btn{display:inline-block;padding:.5rem .8rem;border-radius:8px;border:1px solid rgba(2,6,23,0.06);color:var(--text);text-decoration:none}
-.btn.primary{background:linear-gradient(90deg,var(--accent),#7c3aed);color:#fff;font-weight:700}
+.btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;font-weight:700}
 
-.about,.experience,.projects,.skills,.contact,.education,.certifications{background:var(--card);border-radius:var(--radius);padding:1.25rem;margin:1rem 0;box-shadow:0 6px 18px rgba(13,38,61,0.06)}
+.about,.experience,.projects,.skills,.contact,.education,.certifications{background:var(--card);border-radius:var(--radius);padding:1.25rem;margin:1rem 0;box-shadow:0 8px 20px rgba(162,129,100,0.06)}
 .cards{display:grid;grid-template-columns:1fr;gap:1rem}
 .card{padding:1rem;border-radius:8px}
 .meta{color:var(--muted);font-size:.95rem}
@@ -50,7 +52,7 @@ body{
 }
 
 @media(max-width:700px){
-  .nav{position:fixed;right:12px;top:64px;flex-direction:column;background:#fff;padding:1rem;border-radius:8px;display:none;box-shadow:0 8px 24px rgba(2,6,23,0.08)}
+  .nav{position:fixed;right:12px;top:64px;flex-direction:column;background:var(--card);padding:1rem;border-radius:8px;display:none;box-shadow:0 10px 30px rgba(162,129,100,0.08)}
   .nav.show{display:flex}
   .nav-toggle{display:block}
   .container{padding:1rem}

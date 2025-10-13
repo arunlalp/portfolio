@@ -26,29 +26,45 @@
     <main>
       <section class="hero">
         <div class="container">
-          <h1>Hi, I'm Arun Lal</h1>
-          <p class="tagline">Software developer — building accessible, responsive web experiences.</p>
+          <h1>Arun Lal</h1>
+          <p class="tagline">DevOps Engineer</p>
+          <p class="contact-inline">+91 85264 33976 • <a href="mailto:arunlalpn@gmail.com">arunlalpn@gmail.com</a> • <a href="https://github.com/arunlalp" target="_blank">GitHub</a> • <a href="#">LinkedIn</a> • <a href="#">Blogs</a></p>
           <p class="cta-row">
             <a class="btn primary" href="#projects">View Projects</a>
-            <a class="btn" href="#contact">Get in touch</a>
+            <a class="btn" href="#contact">Contact</a>
           </p>
         </div>
       </section>
 
       <section id="about" class="container about">
-        <h2>About</h2>
-        <p>I’m a software developer specializing in modern web development. This template is populated from your resume — replace the placeholder text with content from your PDF or let me extract it for you.</p>
+        <h2>Summary</h2>
+        <p>DevOps Engineer and AWS Community Builder with expertise in automating cloud infrastructure, implementing CI/CD pipelines, and managing secure, scalable systems.</p>
       </section>
 
       <section id="experience" class="container experience">
         <h2>Experience</h2>
         <div class="cards">
           <article class="card">
-            <h3>Job Title — Company</h3>
-            <p class="meta">Location • Dates</p>
+            <h3>DevOps Engineer — CrunchOps</h3>
+            <p class="meta">Jan 2023 – Present</p>
             <ul>
-              <li>Achievement or responsibility</li>
-              <li>Achievement or responsibility</li>
+              <li>Implemented AWS tag policies using Terraform for consistent resource tagging.</li>
+              <li>Designed and implemented client VPN endpoint setups to ensure secure access to private networks.</li>
+              <li>Led CI/CD improvements by integrating Checkov to scan Terraform code and automated notification alerts via AWS SES.</li>
+              <li>Deployed Prometheus Alertmanager, Blackbox Exporter, JMX Exporter, and Pushgateway for monitoring.</li>
+              <li>Designed and implemented a disaster recovery solution for EKS using Velero with automated backups in Amazon S3.</li>
+              <li>Managed Nginx Ingress Controller with Cert Manager for secure routing in Kubernetes.</li>
+              <li>Integrated AWS Load Balancer Controller with ExternalDNS for Route53 management.</li>
+              <li>Migrated from Nginx Ingress Controller to Gateway API for improved traffic management.</li>
+              <li>Set up Azure OpenAI environment for AI-powered services.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Security Team Lead — SANED Facility Management</h3>
+            <p class="meta">Nov 2019 – Jan 2022</p>
+            <ul>
+              <li>Led the team supporting IT operations for networking and CCTV implementations.</li>
             </ul>
           </article>
         </div>
@@ -58,23 +74,69 @@
         <h2>Projects</h2>
         <div class="grid">
           <article class="project">
-            <h3>Project Name</h3>
-            <p>Short description of the project, technologies used, and your role.</p>
-            <p class="project-links"><a href="#">Live</a> · <a href="#">Source</a></p>
+            <h3>Healthcare Client</h3>
+            <ul>
+              <li>Deployed and managed EKS clusters for CI/CD runners with Karpenter for dynamic scaling.</li>
+              <li>Automated provisioning using Terraform, Packer, and Ansible, including AMI creation.</li>
+              <li>Built Python scripts to enable JFrog X-Ray and SonarQube PR decoration.</li>
+              <li>Automated issue reporting integration into ServiceNow and led AWS migrations to reduce costs (Postgres RDS, EFS).</li>
+            </ul>
+          </article>
+
+          <article class="project">
+            <h3>SaaS App Client</h3>
+            <ul>
+              <li>Led observability stack setup with Prometheus and Grafana.</li>
+              <li>Designed private EKS cluster with dev/qa/prod environments and VPC peering.</li>
+              <li>Automated infra and CI/CD using Terraform and GitHub Actions.</li>
+              <li>Created a Pritunl VPN server using Packer and Ansible for secure access and implemented Karpenter for cost reduction.</li>
+            </ul>
           </article>
         </div>
       </section>
 
       <section id="skills" class="container skills">
         <h2>Skills</h2>
-        <p>HTML, CSS, JavaScript, React, Node.js, TypeScript, Accessibility, Testing</p>
+        <p>
+          <strong>Cloud Providers:</strong> AWS, Azure<br>
+          <strong>Containers & Scaling:</strong> Kubernetes, Docker, Podman, Karpenter<br>
+          <strong>Package Management:</strong> Helm, Kustomize<br>
+          <strong>VCS:</strong> GitHub, GitLab, Bitbucket<br>
+          <strong>Config Mgmt:</strong> Ansible<br>
+          <strong>Scripting:</strong> Bash, Python<br>
+          <strong>IaC:</strong> Terraform, Vagrant, Packer<br>
+          <strong>Databases:</strong> MySQL<br>
+          <strong>CI/CD:</strong> GitLab, GitHub Actions, Harness, ArgoCD, Jenkins<br>
+          <strong>Monitoring:</strong> Prometheus, Thanos, Grafana<br>
+          <strong>Collab:</strong> Slack, Microsoft Teams, Jira, Asana<br>
+          <strong>Artifact Repo:</strong> JFrog<br>
+          <strong>Security:</strong> SonarQube, Trivy, Checkov<br>
+          <strong>Secrets:</strong> AWS Secrets Manager, Azure Key Vault<br>
+          <strong>Backup & Recovery:</strong> Velero
+        </p>
+      </section>
+
+      <section id="education" class="container education">
+        <h2>Education</h2>
+        <p><strong>Bachelor of Science</strong><br>Manonmaniyam Sundaranar University</p>
+        <p><strong>Currently pursuing</strong> Master of Computer Application (MCA), Bharathiyar University, Coimbatore (Online)</p>
+      </section>
+
+      <section id="certifications" class="container certifications">
+        <h2>Certifications</h2>
+        <ul>
+          <li>Certified Kubernetes Security Specialist (CKS) — The Linux Foundation (March, 2025)</li>
+          <li>Certified Kubernetes Administrator (CKA) — The Linux Foundation (March, 2024)</li>
+          <li>RedHat Certified System Administrator (RHCSA) — RedHat (June, 2023)</li>
+        </ul>
       </section>
 
       <section id="contact" class="container contact">
         <h2>Contact</h2>
-        <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+        <p>Email: <a href="mailto:arunlalpn@gmail.com">arunlalpn@gmail.com</a></p>
+        <p>Phone: +91 85264 33976</p>
         <p>GitHub: <a href="https://github.com/arunlalp" target="_blank">github.com/arunlalp</a></p>
-        <p>LinkedIn: <a href="#" target="_blank">Your LinkedIn</a></p>
+        <p>LinkedIn: <a href="#">Your LinkedIn</a></p>
       </section>
     </main>
 

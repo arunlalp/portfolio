@@ -46,6 +46,41 @@ body{
 
 .site-footer{padding:1.25rem 0;color:var(--muted);text-align:center}
 
+/* Two-column layout */
+.layout{display:flex;min-height:100vh}
+.sidebar{width:300px;padding:2rem;border-right:1px solid rgba(0,0,0,0.02);position:sticky;top:0;height:100vh;background:var(--card)}
+.content{flex:1;padding:2.5rem 3rem}
+.avatar{width:88px;height:88px;border-radius:14px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:28px;margin-bottom:1rem}
+.profile h1{margin:0;font-size:1.25rem;color:var(--text)}
+.profile .title{color:var(--muted);margin:.25rem 0 1rem}
+.socials{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem}
+.socials a{color:var(--accent);text-decoration:none;font-weight:600}
+.side-nav{display:flex;flex-direction:column;gap:.5rem;margin-top:1.25rem}
+.side-nav a{color:var(--muted);text-decoration:none;padding:.5rem;border-radius:6px}
+.side-nav a:hover{color:var(--text);background:rgba(37,24,20,0.02)}
+.sidebar-toggle{display:none;margin-top:1rem;background:transparent;border:0;color:var(--accent);font-size:1.1rem}
+
+/* Timeline */
+.timeline{display:flex;flex-direction:column;gap:1.25rem}
+.timeline .item{padding:1rem;border-radius:8px;background:linear-gradient(180deg, rgba(255,255,255,0.6), transparent);box-shadow:0 6px 18px rgba(162,129,100,0.04)}
+.timeline .meta{color:var(--muted);margin-bottom:.5rem}
+
+/* Projects grid */
+.projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.project-card{padding:1rem;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,250,245,0.9));box-shadow:0 8px 20px rgba(162,129,100,0.04)}
+
+/* Skills badges */
+.skills-list{display:flex;flex-wrap:wrap;gap:.5rem}
+.skills-list span{background:rgba(215,119,6,0.08);color:var(--accent);padding:.4rem .6rem;border-radius:999px;font-weight:600}
+
+@media(max-width:1000px){
+  .layout{flex-direction:column}
+  .sidebar{width:100%;position:relative;height:auto;border-right:0}
+  .sidebar-toggle{display:block}
+  .content{padding:1.25rem}
+  .projects-grid{grid-template-columns:1fr}
+}
+
 @media(min-width:700px){
   .cards{grid-template-columns:repeat(2,1fr)}
   .grid{grid-template-columns:repeat(2,1fr)}

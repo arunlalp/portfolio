@@ -21,8 +21,9 @@ body{
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
   line-height:1.5;
+  min-height:100vh;
   display:flex;
-  justify-content:center;
+  flex-direction:column;
 }
 .container{
   max-width:var(--content-width);
@@ -61,7 +62,12 @@ body{
 .grid{display:grid;grid-template-columns:1fr;gap:1rem}
 .project{padding:1rem;border-radius:8px}
 
-.site-footer{padding:1.25rem 0;color:var(--muted);text-align:center}
+.site-footer{
+  padding:1.25rem 0;
+  color:var(--muted);
+  text-align:center;
+  margin-top:auto;
+}
 
 @media(min-width:700px){
   .cards{grid-template-columns:repeat(2,1fr)}

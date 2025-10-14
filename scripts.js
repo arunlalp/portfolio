@@ -13,15 +13,6 @@ document.addEventListener('DOMContentLoaded', function(){
     });
   }
 
-  // Sidebar toggle for mobile
-  const sidebarToggle = document.getElementById('sidebar-toggle');
-  const sidebar = document.getElementById('sidebar');
-  if(sidebarToggle && sidebar){
-    sidebarToggle.addEventListener('click', () => {
-      sidebar.classList.toggle('open');
-    });
-  }
-
   // Smooth scroll for internal links
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', function(e){
@@ -31,22 +22,7 @@ document.addEventListener('DOMContentLoaded', function(){
         const target = document.querySelector(href);
         if(target) target.scrollIntoView({behavior:'smooth', block:'start'});
         if(nav) nav.classList.remove('show');
-        if(sidebar) sidebar.classList.remove('open');
       }
     });
   });
-
-  // Active section highlight
-  const navLinks = document.querySelectorAll('.side-nav a');
-  const sections = Array.from(navLinks).map(l => document.querySelector(l.getAttribute('href'))).filter(Boolean);
-  function onScroll(){
-    const pos = window.scrollY + 120;
-    let current = sections[0];
-    for(const s of sections){
-      if(s.offsetTop <= pos) current = s;
-    }
-    navLinks.forEach(l => l.classList.toggle('active', document.querySelector(l.getAttribute('href')) === current));
-  }
-  window.addEventListener('scroll', onScroll);
-  onScroll();
 });

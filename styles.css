@@ -24,8 +24,10 @@ body{
   min-height:100vh;
   display:flex;
   flex-direction:column;
+  align-items:center;
 }
 .container{
+  width:100%;
   max-width:var(--content-width);
   margin:0 auto 2rem;
   padding:2rem;
@@ -33,6 +35,14 @@ body{
   border-radius:var(--radius);
   box-shadow:0 8px 20px rgba(162,129,100,0.06);
   position:relative;
+}
+main {
+  width:100%;
+  max-width:var(--content-width);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:0 1rem;
 }
 .header-inner{display:flex;align-items:center;justify-content:space-between}
 .brand{font-weight:700;color:var(--text);text-decoration:none}
@@ -55,7 +65,15 @@ body{
 .btn{display:inline-block;padding:.5rem .8rem;border-radius:8px;border:1px solid rgba(2,6,23,0.06);color:var(--text);text-decoration:none}
 .btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;font-weight:700}
 
-.about,.experience,.projects,.skills,.contact,.education,.certifications{background:var(--card);border-radius:var(--radius);padding:1.25rem;margin:1rem 0;box-shadow:0 8px 20px rgba(162,129,100,0.06)}
+.about,.experience,.projects,.skills,.contact,.education,.certifications{
+  width:100%;
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:1.25rem;
+  margin:1rem 0;
+  box-shadow:0 8px 20px rgba(162,129,100,0.06);
+  text-align:center;
+}
 .cards{display:grid;grid-template-columns:1fr;gap:1rem}
 .card{padding:1rem;border-radius:8px}
 .meta{color:var(--muted);font-size:.95rem}

@@ -1,16 +1,18 @@
 :root{
-  /* Warm white theme */
-  --bg: #fffaf5; /* very light warm cream */
-  --card: #fffefc; /* slightly off-white card */
-  --muted: #6b6b63; /* warm gray for secondary text */
-  --accent: #d97706; /* warm amber accent */
-  --accent-2: #fb923c; /* lighter accent for gradients */
-  --text: #251814; /* deep warm brown for primary text */
-  --radius: 10px;
+  /* Modern Tech Theme */
+  --bg: #0f172a; /* Dark blue background */
+  --card: #1e293b; /* Slightly lighter blue for cards */
+  --muted: #94a3b8; /* Cool gray for secondary text */
+  --accent: #06b6d4; /* Cyan accent */
+  --accent-2: #0891b2; /* Darker cyan for gradients */
+  --text: #e2e8f0; /* Light gray for primary text */
+  --text-bold: #f8fafc; /* Brighter white for headings */
+  --radius: 8px;
   --max-width: 1400px;
-  --content-width: 800px;
-  --gap: 1.25rem;
-  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  --content-width: 900px;
+  --gap: 1.5rem;
+  --border: #334155; /* Border color */
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
 }
 *{box-sizing:border-box}
 html,body{height:100%}
@@ -53,17 +55,74 @@ main {
 .nav-toggle{display:none;background:transparent;border:0;color:var(--text);font-size:1.25rem}
 
 .hero{
-  padding:4rem 0;
-  text-align:center;
-  margin-bottom:3rem;
-  background:var(--card);
-  border-radius:var(--radius);
+  padding: 6rem 0;
+  text-align: center;
+  margin-bottom: 3rem;
+  background: linear-gradient(135deg, var(--card) 0%, rgba(6, 182, 212, 0.1) 100%);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: var(--text-bold);
+  margin-bottom: 1rem;
+  letter-spacing: -1px;
+}
+
+.hero .tagline {
+  font-size: 1.5rem;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
 }
 .hero h1{font-size:2.1rem;margin:0 0 .25rem}
 .tagline{color:var(--muted);margin-bottom:0.5rem}
 .contact-inline{color:var(--muted);margin-bottom:1rem}
-.btn{display:inline-block;padding:.5rem .8rem;border-radius:8px;border:1px solid rgba(2,6,23,0.06);color:var(--text);text-decoration:none}
-.btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;font-weight:700}
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  background: transparent;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.btn:hover {
+  background: var(--accent);
+  color: var(--text-bold);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(6, 182, 212, 0.2);
+}
+
+.btn.primary {
+  background: var(--accent);
+  color: var(--text-bold);
+  font-weight: 600;
+}
+
+.btn.primary:hover {
+  background: var(--accent-2);
+  border-color: var(--accent-2);
+}
 
 .about,.experience,.projects,.skills,.contact,.education,.certifications{
   width:100%;
@@ -96,11 +155,47 @@ main {
 .card, .project {
   width: 100%;
   max-width: var(--content-width);
-  text-align: center;
+  text-align: left;
   padding: 2rem;
   border-radius: var(--radius);
   background: var(--card);
-  box-shadow: 0 4px 12px rgba(162,129,100,0.04);
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover, .project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(6, 182, 212, 0.15);
+  border-color: var(--accent);
+}
+
+.card h3, .project h3 {
+  color: var(--accent);
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card ul, .project ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.card ul li, .project ul li {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+  position: relative;
+}
+
+.card ul li::before, .project ul li::before {
+  content: "→";
+  color: var(--accent);
+  position: absolute;
+  left: -1.5rem;
+  top: 0;
 }
 
 .card ul, .project ul {
@@ -113,15 +208,27 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 0.75rem;
   padding: 1rem;
 }
 
 .skills-list span {
-  background: var(--bg);
-  padding: 0.5rem 1rem;
-  border-radius: var(--radius);
+  background: rgba(6, 182, 212, 0.1);
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
   display: inline-block;
+  border: 1px solid var(--accent);
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  color: var(--accent);
+  transition: all 0.3s ease;
+}
+
+.skills-list span:hover {
+  background: var(--accent);
+  color: var(--text-bold);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(6, 182, 212, 0.2);
 }
 .cards{display:grid;grid-template-columns:1fr;gap:1rem}
 .card{padding:1rem;border-radius:8px}
@@ -160,4 +267,71 @@ main {
 @media print{
   body{color:#000;background:#fff}
   .nav, .nav-toggle, .site-footer{display:none}
+}
+
+/* Modern Tech Styles */
+.site-header {
+  padding: 1.25rem 0;
+  background: rgba(30, 41, 59, 0.8);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+h2 {
+  font-size: 1.75rem;
+  color: var(--text-bold);
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+h2 i {
+  color: var(--accent);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-2);
+}
+
+.contact-inline {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contact-inline i {
+  color: var(--accent);
+}
+
+/* Add animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card, .project {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.skills-list span {
+  animation: fadeInUp 0.3s ease forwards;
+  animation-delay: calc(var(--index) * 0.1s);
 }

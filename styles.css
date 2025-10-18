@@ -31,32 +31,34 @@ body{
 .site-header {
   width: 100%;
   background: var(--card);
-  border-bottom: 1px solid var(--border);
-  padding: 1rem 0;
+  border-bottom: 1px solid rgba(162,129,100,0.1);
   position: sticky;
   top: 0;
   z-index: 100;
+  box-shadow: 0 1px 3px rgba(162,129,100,0.05);
 }
 
 .header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: var(--content-width);
-  margin: 0 auto;
-  padding: 0 1rem;
+  width: 100%;
+  padding: 0 2rem;
+  height: 70px;
 }
 
 .brand {
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   font-weight: 700;
-  color: var(--text-bold);
+  color: var(--text);
   text-decoration: none;
+  padding: 0.5rem 0;
 }
 
 .side-nav {
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
+  align-items: center;
 }
 
 .side-nav a {
@@ -64,10 +66,23 @@ body{
   text-decoration: none;
   padding: 0.5rem;
   transition: all 0.3s ease;
+  font-size: 0.95rem;
+  position: relative;
 }
 
 .side-nav a:hover {
   color: var(--accent);
+}
+
+.side-nav a:hover::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0.5rem;
+  right: 0.5rem;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
 }
 
 /* Main Content */
@@ -294,20 +309,30 @@ main {
 }
 
 @media(max-width:700px){
-  .nav{
-    position:fixed;
-    right:12px;
-    top:64px;
-    flex-direction:column;
-    background:var(--card);
-    padding:1rem;
-    border-radius:8px;
-    display:none;
-    box-shadow:0 10px 30px rgba(0,0,0,0.2)
+  .header-inner {
+    padding: 0 1rem;
   }
-  .nav.show{display:flex}
-  .nav-toggle{display:block}
-  .container{padding:1rem}
+  .side-nav {
+    position: fixed;
+    right: 12px;
+    top: 70px;
+    flex-direction: column;
+    background: var(--card);
+    padding: 1rem;
+    border-radius: var(--radius);
+    display: none;
+    box-shadow: 0 10px 30px rgba(162,129,100,0.1);
+    gap: 0.5rem;
+  }
+  .side-nav.show {
+    display: flex;
+  }
+  .nav-toggle {
+    display: block;
+  }
+  .container {
+    padding: 1rem;
+  }
 }
 
 @media print{

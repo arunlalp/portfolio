@@ -70,7 +70,7 @@ body{
 .brand-name {
   font-weight: 600;
   font-size: 1.25rem;
-  color: #3b82f6;
+  color: var(--accent);
   line-height: 1;
 }
 
@@ -104,12 +104,12 @@ body{
   height: 2px;
   bottom: -2px;
   left: 0;
-  background-color: #3b82f6;
+  background-color: var(--accent);
   transition: width 0.2s ease;
 }
 
 .side-nav a:hover {
-  color: #3b82f6;
+  color: var(--accent);
 }
 
 .side-nav a:hover::after,
@@ -118,7 +118,7 @@ body{
 }
 
 .side-nav a.active {
-  color: #3b82f6;
+  color: var(--accent);
   font-weight: 600;
 }
 
@@ -161,14 +161,18 @@ main {
 .nav-toggle{display:none;background:transparent;border:0;color:var(--text);font-size:1.25rem}
 
 .hero {
-  min-height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 0 2rem;
+  padding: 3rem 5%;
+  background: var(--card);
+  position: relative;
+  border: none;
+  border-radius: 0;
+  min-height: calc(100vh - var(--header-height));
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  background-color: #f8fafc;
-  padding: 2rem 1rem;
-  position: relative; /* create stacking context for pseudo element */
 }
 
 .hero-content {
@@ -331,6 +335,18 @@ main {
   margin:1rem 0;
   box-shadow:0 8px 20px rgba(162,129,100,0.06);
   text-align:center;
+}
+
+.experience .cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.experience .card {
+  max-width: 800px;
+  text-align: center;
 }
 
 .about p, .experience p, .projects p, .skills p, .contact p, .education p, .certifications p,
@@ -658,6 +674,69 @@ a:hover {
 .skill-badge.azure { background: linear-gradient(135deg, #0078d4, #40a9ff); }
 .skill-badge.gcp { background: linear-gradient(135deg, #4285f4, #34a853); }
 
+/* Skill Bars */
+.skill-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.skill-item {
+  width: 100%;
+}
+
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.skill-name {
+  font-weight: 500;
+  color: var(--text);
+}
+
+.skill-level {
+  font-size: 0.9rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.skill-bar {
+  width: 100%;
+  height: 8px;
+  background: var(--bg);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.skill-progress {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  border-radius: 4px;
+  width: 0%;
+  transition: width 1.5s ease-in-out;
+  position: relative;
+}
+
+.skill-progress::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
 /* Enhanced Projects Section */
 .projects-grid {
   display: grid;
@@ -863,6 +942,22 @@ a:hover {
 .cert-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+
+.cert-logo {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cert-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
 }
 
 .cert-icon {

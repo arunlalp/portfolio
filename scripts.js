@@ -105,6 +105,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize animations
     animateStats();
+    
+    // Animate skill bars
+    function animateSkillBars() {
+        const skillBars = document.querySelectorAll('.skill-progress');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const skillBar = entry.target;
+                    const width = skillBar.getAttribute('data-width');
+                    setTimeout(() => {
+                        skillBar.style.width = width + '%';
+                    }, 200);
+                    observer.unobserve(skillBar);
+                }
+            });
+        });
+        
+        skillBars.forEach(bar => observer.observe(bar));
+    }
+    
+    // Initialize skill bar animations
+    animateSkillBars();
 
     // Add hover effects to skill badges
     const skillBadges = document.querySelectorAll('.skill-badge');

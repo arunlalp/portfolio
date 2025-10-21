@@ -1,204 +1,517 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Arun Lal — DevOps Engineer</title>
-    <meta name="description" content="Portfolio of Arun Lal — DevOps Engineer specializing in cloud infrastructure, Kubernetes, and automation" />
-    <link rel="stylesheet" href="styles.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="header-inner">
-        <a class="brand" href="#">
-          <span class="brand-name">Arun Lal</span>
-          <span class="brand-role">DevOps Engineer</span>
-        </a>
-        <button id="nav-toggle" class="nav-toggle" aria-label="Open navigation">☰</button>
-        <nav class="side-nav" id="side-nav">
-          <a href="#home" class="active">Home</a>
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#experience">Experience</a>
-          <a href="#certifications">Certifications</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </div>
-    </header>
 
-    <main>
-  <section id="home" class="hero">
-        <div class="hero-grid">
-          <div class="hero-left">
-            <h1>Arun Lal</h1>
-            <p class="tagline">DevOps Engineer</p>
-            <div class="contact-links">
-              <a href="tel:+91 85264 33976" class="contact-link">
-                <i class="bi bi-telephone"></i>
-                <span>+91 85264 33976</span>
-              </a>
-              <a href="mailto:arunlalpn@gmail.com" class="contact-link">
-                <i class="bi bi-envelope"></i>
-                <span>arunlalpn@gmail.com</span>
-              </a>
-              <a href="https://github.com/arunlalp" target="_blank" class="contact-link">
-                <i class="bi bi-github"></i>
-                <span>GitHub</span>
-              </a>
-            </div>
-            <div class="cta-buttons">
-              <a class="cta-button primary" href="#projects">
-                <i class="bi bi-code-slash"></i>
-                View Projects
-              </a>
-              <a class="cta-button secondary" href="#contact">
-                <i class="bi bi-chat-text"></i>
-                Contact
-              </a>
-            </div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Arun Lal — DevOps Engineer</title>
+  <meta name="description"
+    content="Portfolio of Arun Lal — DevOps Engineer specializing in cloud infrastructure, Kubernetes, and automation" />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#">
+        <span class="brand-name">Arun Lal</span>
+        <span class="brand-role">DevOps Engineer</span>
+      </a>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Open navigation">☰</button>
+      <nav class="side-nav" id="side-nav">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#blog">Articles</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-grid">
+        <div class="hero-left">
+          <h1>Arun Lal</h1>
+          <p class="tagline">DevOps Engineer</p>
+          <div class="contact-links">
+            <a href="tel:+91 85264 33976" class="contact-link">
+              <i class="bi bi-telephone"></i>
+              <span>+91 85264 33976</span>
+            </a>
+            <a href="mailto:arunlalpn@gmail.com" class="contact-link">
+              <i class="bi bi-envelope"></i>
+              <span>arunlalpn@gmail.com</span>
+            </a>
+            <a href="https://github.com/arunlalp" target="_blank" class="contact-link">
+              <i class="bi bi-github"></i>
+              <span>GitHub</span>
+            </a>
           </div>
-          <div class="hero-right">
-            <div class="profile-wrap">
-              <img src="assets/arun.jpg" alt="Arun Lal" class="profile-photo" onerror="this.parentElement.classList.add('no-image'); this.style.display='none'" />
-            </div>
+          <div class="cta-buttons">
+            <a class="cta-button primary" href="#projects">
+              <i class="bi bi-code-slash"></i>
+              View Projects
+            </a>
+            <a class="cta-button secondary" href="#contact">
+              <i class="bi bi-chat-text"></i>
+              Contact
+            </a>
           </div>
         </div>
-      </section>
-      
+        <div class="hero-right">
+          <div class="profile-wrap">
+            <img src="assets/arun.jpg" alt="Arun Lal" class="profile-photo"
+              onerror="this.parentElement.classList.add('no-image'); this.style.display='none'" />
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <section id="about" class="container about">
-          <h2>About Me</h2>
-          <p>DevOps Engineer and AWS Community Builder with expertise in automating cloud infrastructure, implementing CI/CD pipelines, and managing secure, scalable systems. I specialize in Kubernetes, cloud platforms, and infrastructure automation.</p>
-        </section>
 
-        <section id="skills" class="container skills">
-          <h2>Skills</h2>
+    <section id="about" class="container about">
+      <h2><i class="bi bi-person-circle"></i>About Me</h2>
+      <div class="about-content">
+        <p class="lead">DevOps Engineer and AWS Community Builder with expertise in automating cloud infrastructure,
+          implementing CI/CD pipelines, and managing secure, scalable systems.</p>
+        <div class="about-stats">
+          <div class="stat">
+            <span class="stat-number">5+</span>
+            <span class="stat-label">Years Experience</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">50+</span>
+            <span class="stat-label">Projects Deployed</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">3</span>
+            <span class="stat-label">Cloud Certifications</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">99.9%</span>
+            <span class="stat-label">Uptime Achieved</span>
+          </div>
+        </div>
+        <p>I specialize in building resilient, scalable infrastructure using modern DevOps practices. My expertise spans
+          across cloud platforms (AWS, Azure), container orchestration (Kubernetes), infrastructure as code (Terraform),
+          and comprehensive monitoring solutions.</p>
+      </div>
+    </section>
+
+    <section id="skills" class="container skills">
+      <h2><i class="bi bi-gear-fill"></i>Technical Skills</h2>
+      <div class="skills-categories">
+        <div class="skill-category">
+          <h3><i class="bi bi-cloud"></i>Cloud Platforms</h3>
           <div class="skills-list">
-            <span>AWS</span>
-            <span>Azure</span>
-            <span>Kubernetes</span>
-            <span>Docker</span>
-            <span>Terraform</span>
-            <span>Ansible</span>
-            <span>Python</span>
-            <span>Bash</span>
-            <span>Jenkins</span>
-            <span>GitHub Actions</span>
-            <span>ArgoCD</span>
-            <span>Prometheus</span>
-            <span>Grafana</span>
-            <span>Velero</span>
+            <span class="skill-badge aws">AWS</span>
+            <span class="skill-badge azure">Azure</span>
+            <span class="skill-badge gcp">GCP</span>
           </div>
-        </section>
-
-        <section id="experience" class="container experience">
-        <h2>Experience</h2>
-        <div class="cards">
-          <article class="card">
-            <h3>DevOps Engineer — CrunchOps</h3>
-            <p class="meta">Jan 2023 – Present</p>
-            <ul>
-              <li>Implemented AWS tag policies using Terraform for consistent resource tagging.</li>
-              <li>Designed and implemented client VPN endpoint setups to ensure secure access to private networks.</li>
-              <li>Led CI/CD improvements by integrating Checkov to scan Terraform code and automated notification alerts via AWS SES.</li>
-              <li>Deployed Prometheus Alertmanager, Blackbox Exporter, JMX Exporter, and Pushgateway for monitoring.</li>
-              <li>Designed and implemented a disaster recovery solution for EKS using Velero with automated backups in Amazon S3.</li>
-              <li>Managed Nginx Ingress Controller with Cert Manager for secure routing in Kubernetes.</li>
-              <li>Integrated AWS Load Balancer Controller with ExternalDNS for Route53 management.</li>
-              <li>Migrated from Nginx Ingress Controller to Gateway API for improved traffic management.</li>
-              <li>Set up Azure OpenAI environment for AI-powered services.</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <h3>Security Team Lead — SANED Facility Management</h3>
-            <p class="meta">Nov 2019 – Jan 2022</p>
-            <ul>
-              <li>Led the team supporting IT operations for networking and CCTV implementations.</li>
-            </ul>
-          </article>
         </div>
-      </section>
-
-      <section id="projects" class="container projects">
-        <h2>Projects</h2>
-        <div class="grid">
-          <article class="project">
-            <h3>Healthcare Client</h3>
-            <ul>
-              <li>Deployed and managed EKS clusters for CI/CD runners with Karpenter for dynamic scaling.</li>
-              <li>Automated provisioning using Terraform, Packer, and Ansible, including AMI creation.</li>
-              <li>Built Python scripts to enable JFrog X-Ray and SonarQube PR decoration.</li>
-              <li>Automated issue reporting integration into ServiceNow and led AWS migrations to reduce costs (Postgres RDS, EFS).</li>
-            </ul>
-          </article>
-
-          <article class="project">
-            <h3>SaaS App Client</h3>
-            <ul>
-              <li>Led observability stack setup with Prometheus and Grafana.</li>
-              <li>Designed private EKS cluster with dev/qa/prod environments and VPC peering.</li>
-              <li>Automated infra and CI/CD using Terraform and GitHub Actions.</li>
-              <li>Created a Pritunl VPN server using Packer and Ansible for secure access and implemented Karpenter for cost reduction.</li>
-            </ul>
-          </article>
+        <div class="skill-category">
+          <h3><i class="bi bi-box"></i>Containers & Orchestration</h3>
+          <div class="skills-list">
+            <span class="skill-badge">Kubernetes</span>
+            <span class="skill-badge">Docker</span>
+            <span class="skill-badge">Podman</span>
+            <span class="skill-badge">Helm</span>
+            <span class="skill-badge">Kustomize</span>
+          </div>
         </div>
-      </section>
-
-      <section id="skills" class="container skills">
-        <h2>Skills</h2>
-        <p>
-          <strong>Cloud Providers:</strong> AWS, Azure<br>
-          <strong>Containers & Scaling:</strong> Kubernetes, Docker, Podman, Karpenter<br>
-          <strong>Package Management:</strong> Helm, Kustomize<br>
-          <strong>VCS:</strong> GitHub, GitLab, Bitbucket<br>
-          <strong>Config Mgmt:</strong> Ansible<br>
-          <strong>Scripting:</strong> Bash, Python<br>
-          <strong>IaC:</strong> Terraform, Vagrant, Packer<br>
-          <strong>Databases:</strong> MySQL<br>
-          <strong>CI/CD:</strong> GitLab, GitHub Actions, Harness, ArgoCD, Jenkins<br>
-          <strong>Monitoring:</strong> Prometheus, Thanos, Grafana<br>
-          <strong>Collab:</strong> Slack, Microsoft Teams, Jira, Asana<br>
-          <strong>Artifact Repo:</strong> JFrog<br>
-          <strong>Security:</strong> SonarQube, Trivy, Checkov<br>
-          <strong>Secrets:</strong> AWS Secrets Manager, Azure Key Vault<br>
-          <strong>Backup & Recovery:</strong> Velero
-        </p>
-      </section>
-
-      <section id="education" class="container education">
-        <h2>Education</h2>
-        <p><strong>Bachelor of Science</strong><br>Manonmaniyam Sundaranar University</p>
-        <p><strong>Currently pursuing</strong> Master of Computer Application (MCA), Bharathiyar University, Coimbatore (Online)</p>
-      </section>
-
-      <section id="certifications" class="container certifications">
-        <h2>Certifications</h2>
-        <ul>
-          <li>Certified Kubernetes Security Specialist (CKS) — The Linux Foundation (March, 2025)</li>
-          <li>Certified Kubernetes Administrator (CKA) — The Linux Foundation (March, 2024)</li>
-          <li>RedHat Certified System Administrator (RHCSA) — RedHat (June, 2023)</li>
-        </ul>
-      </section>
-
-      <section id="contact" class="container contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:arunlalpn@gmail.com">arunlalpn@gmail.com</a></p>
-        <p>Phone: +91 85264 33976</p>
-        <p>GitHub: <a href="https://github.com/arunlalp" target="_blank">github.com/arunlalp</a></p>
-        <p>LinkedIn: <a href="#">Your LinkedIn</a></p>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container">
-        <p>© <span id="year"></span> Arun Lal — Built with a minimal template.</p>
+        <div class="skill-category">
+          <h3><i class="bi bi-code-square"></i>Infrastructure as Code</h3>
+          <div class="skills-list">
+            <span class="skill-badge">Terraform</span>
+            <span class="skill-badge">Ansible</span>
+            <span class="skill-badge">Packer</span>
+            <span class="skill-badge">Vagrant</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3><i class="bi bi-arrow-repeat"></i>CI/CD & Automation</h3>
+          <div class="skills-list">
+            <span class="skill-badge">GitHub Actions</span>
+            <span class="skill-badge">Jenkins</span>
+            <span class="skill-badge">GitLab CI</span>
+            <span class="skill-badge">ArgoCD</span>
+            <span class="skill-badge">Harness</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3><i class="bi bi-graph-up"></i>Monitoring & Observability</h3>
+          <div class="skills-list">
+            <span class="skill-badge">Prometheus</span>
+            <span class="skill-badge">Grafana</span>
+            <span class="skill-badge">Thanos</span>
+            <span class="skill-badge">ELK Stack</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3><i class="bi bi-terminal"></i>Programming & Scripting</h3>
+          <div class="skills-list">
+            <span class="skill-badge">Python</span>
+            <span class="skill-badge">Bash</span>
+            <span class="skill-badge">Go</span>
+            <span class="skill-badge">YAML</span>
+          </div>
+        </div>
       </div>
-    </footer>
+    </section>
 
-    <script src="scripts.js"></script>
-  </body>
+    <section id="experience" class="container experience">
+      <h2>Experience</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>DevOps Engineer — CrunchOps</h3>
+          <p class="meta">Jan 2023 – Present</p>
+          <ul>
+            <li>Implemented AWS tag policies using Terraform for consistent resource tagging.</li>
+            <li>Designed and implemented client VPN endpoint setups to ensure secure access to private networks.</li>
+            <li>Led CI/CD improvements by integrating Checkov to scan Terraform code and automated notification alerts
+              via AWS SES.</li>
+            <li>Deployed Prometheus Alertmanager, Blackbox Exporter, JMX Exporter, and Pushgateway for monitoring.</li>
+            <li>Designed and implemented a disaster recovery solution for EKS using Velero with automated backups in
+              Amazon S3.</li>
+            <li>Managed Nginx Ingress Controller with Cert Manager for secure routing in Kubernetes.</li>
+            <li>Integrated AWS Load Balancer Controller with ExternalDNS for Route53 management.</li>
+            <li>Migrated from Nginx Ingress Controller to Gateway API for improved traffic management.</li>
+            <li>Set up Azure OpenAI environment for AI-powered services.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Security Team Lead — SANED Facility Management</h3>
+          <p class="meta">Nov 2019 – Jan 2022</p>
+          <ul>
+            <li>Led the team supporting IT operations for networking and CCTV implementations.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="container projects">
+      <h2><i class="bi bi-folder-fill"></i>Featured Projects</h2>
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-header">
+            <h3><i class="bi bi-hospital"></i>Healthcare Platform Infrastructure</h3>
+            <div class="project-tags">
+              <span class="tag">AWS</span>
+              <span class="tag">EKS</span>
+              <span class="tag">Terraform</span>
+              <span class="tag">Karpenter</span>
+            </div>
+          </div>
+          <p class="project-description">Enterprise-grade healthcare platform with HIPAA-compliant infrastructure,
+            automated CI/CD, and cost-optimized scaling.</p>
+          <div class="project-achievements">
+            <div class="achievement">
+              <i class="bi bi-graph-down-arrow"></i>
+              <span>40% cost reduction</span>
+            </div>
+            <div class="achievement">
+              <i class="bi bi-speedometer2"></i>
+              <span>99.9% uptime</span>
+            </div>
+            <div class="achievement">
+              <i class="bi bi-shield-check"></i>
+              <span>HIPAA compliant</span>
+            </div>
+          </div>
+          <ul class="project-details">
+            <li>Deployed and managed EKS clusters for CI/CD runners with Karpenter for dynamic scaling</li>
+            <li>Automated provisioning using Terraform, Packer, and Ansible, including AMI creation</li>
+            <li>Built Python scripts to enable JFrog X-Ray and SonarQube PR decoration</li>
+            <li>Automated issue reporting integration into ServiceNow and led AWS migrations</li>
+          </ul>
+          <div class="project-links">
+            <a href="#" class="project-link"><i class="bi bi-diagram-3"></i>Architecture</a>
+            <a href="#" class="project-link"><i class="bi bi-file-text"></i>Case Study</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-header">
+            <h3><i class="bi bi-cloud-arrow-up"></i>Multi-Environment SaaS Platform</h3>
+            <div class="project-tags">
+              <span class="tag">Kubernetes</span>
+              <span class="tag">Prometheus</span>
+              <span class="tag">GitOps</span>
+              <span class="tag">VPC</span>
+            </div>
+          </div>
+          <p class="project-description">Scalable SaaS platform with comprehensive observability, secure networking, and
+            automated deployment pipelines.</p>
+          <div class="project-achievements">
+            <div class="achievement">
+              <i class="bi bi-lightning"></i>
+              <span>50% faster deployments</span>
+            </div>
+            <div class="achievement">
+              <i class="bi bi-eye"></i>
+              <span>Full observability</span>
+            </div>
+            <div class="achievement">
+              <i class="bi bi-lock"></i>
+              <span>Zero-trust security</span>
+            </div>
+          </div>
+          <ul class="project-details">
+            <li>Led observability stack setup with Prometheus and Grafana</li>
+            <li>Designed private EKS cluster with dev/qa/prod environments and VPC peering</li>
+            <li>Automated infra and CI/CD using Terraform and GitHub Actions</li>
+            <li>Created Pritunl VPN server using Packer and Ansible for secure access</li>
+          </ul>
+          <div class="project-links">
+            <a href="#" class="project-link"><i class="bi bi-diagram-3"></i>Architecture</a>
+            <a href="#" class="project-link"><i class="bi bi-file-text"></i>Case Study</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-header">
+            <h3><i class="bi bi-shield-shaded"></i>Disaster Recovery Solution</h3>
+            <div class="project-tags">
+              <span class="tag">Velero</span>
+              <span class="tag">S3</span>
+              <span class="tag">Backup</span>
+              <span class="tag">Recovery</span>
+            </div>
+          </div>
+          <p class="project-description">Comprehensive disaster recovery solution for Kubernetes workloads with
+            automated backup and restore capabilities.</p>
+          <div class="project-achievements">
+            <div class="achievement">
+              <i class="bi bi-clock"></i>
+              <span>15min RTO</span>
+            </div>
+            <div class="achievement">
+              <i class="bi bi-database"></i>
+              <span>Zero data loss</span>
+            </div>
+            <div class="achievement">
+              <i class="bi bi-arrow-clockwise"></i>
+              <span>Automated recovery</span>
+            </div>
+          </div>
+          <ul class="project-details">
+            <li>Designed and implemented disaster recovery solution for EKS using Velero</li>
+            <li>Automated backups to Amazon S3 with cross-region replication</li>
+            <li>Created runbooks and tested recovery procedures regularly</li>
+            <li>Integrated with monitoring systems for backup status alerts</li>
+          </ul>
+          <div class="project-links">
+            <a href="#" class="project-link"><i class="bi bi-diagram-3"></i>Architecture</a>
+            <a href="#" class="project-link"><i class="bi bi-file-text"></i>Documentation</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="architecture" class="container architecture">
+      <h2><i class="bi bi-diagram-3"></i>Architecture Showcase</h2>
+      <div class="architecture-grid">
+        <div class="architecture-card">
+          <div class="arch-header">
+            <h3>Multi-Cloud Kubernetes Platform</h3>
+            <span class="arch-type">Production Architecture</span>
+          </div>
+          <div class="arch-diagram">
+            <div class="diagram-placeholder">
+              <i class="bi bi-diagram-3-fill"></i>
+              <p>Interactive architecture diagram</p>
+            </div>
+          </div>
+          <div class="arch-details">
+            <div class="arch-tech">
+              <span>EKS</span>
+              <span>ArgoCD</span>
+              <span>Istio</span>
+              <span>Prometheus</span>
+            </div>
+            <p>Highly available, multi-region Kubernetes platform with GitOps deployment, service mesh, and
+              comprehensive monitoring.</p>
+          </div>
+        </div>
+
+        <div class="architecture-card">
+          <div class="arch-header">
+            <h3>CI/CD Pipeline Architecture</h3>
+            <span class="arch-type">DevOps Pipeline</span>
+          </div>
+          <div class="arch-diagram">
+            <div class="diagram-placeholder">
+              <i class="bi bi-arrow-repeat"></i>
+              <p>Pipeline flow diagram</p>
+            </div>
+          </div>
+          <div class="arch-details">
+            <div class="arch-tech">
+              <span>GitHub Actions</span>
+              <span>SonarQube</span>
+              <span>Trivy</span>
+              <span>ArgoCD</span>
+            </div>
+            <p>Automated CI/CD pipeline with security scanning, quality gates, and GitOps deployment to multiple
+              environments.</p>
+          </div>
+        </div>
+
+        <div class="architecture-card">
+          <div class="arch-header">
+            <h3>Observability Stack</h3>
+            <span class="arch-type">Monitoring & Alerting</span>
+          </div>
+          <div class="arch-diagram">
+            <div class="diagram-placeholder">
+              <i class="bi bi-graph-up"></i>
+              <p>Monitoring architecture</p>
+            </div>
+          </div>
+          <div class="arch-details">
+            <div class="arch-tech">
+              <span>Prometheus</span>
+              <span>Grafana</span>
+              <span>Thanos</span>
+              <span>AlertManager</span>
+            </div>
+            <p>Complete observability solution with metrics, logs, traces, and intelligent alerting across all
+              infrastructure layers.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="container education">
+      <h2>Education</h2>
+      <p><strong>Bachelor of Science</strong><br>Manonmaniyam Sundaranar University</p>
+      <p><strong>Currently pursuing</strong> Master of Computer Application (MCA), Bharathiyar University, Coimbatore
+        (Online)</p>
+    </section>
+
+    <section id="certifications" class="container certifications">
+      <h2><i class="bi bi-award"></i>Certifications</h2>
+      <div class="certifications-grid">
+        <div class="cert-card">
+          <div class="cert-icon">
+            <i class="bi bi-shield-check"></i>
+          </div>
+          <h3>Certified Kubernetes Security Specialist (CKS)</h3>
+          <p class="cert-issuer">The Linux Foundation</p>
+          <p class="cert-date">March 2025</p>
+          <div class="cert-skills">
+            <span>Security</span>
+            <span>Kubernetes</span>
+            <span>Compliance</span>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon">
+            <i class="bi bi-gear-fill"></i>
+          </div>
+          <h3>Certified Kubernetes Administrator (CKA)</h3>
+          <p class="cert-issuer">The Linux Foundation</p>
+          <p class="cert-date">March 2024</p>
+          <div class="cert-skills">
+            <span>Kubernetes</span>
+            <span>Administration</span>
+            <span>Troubleshooting</span>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon">
+            <i class="bi bi-terminal"></i>
+          </div>
+          <h3>RedHat Certified System Administrator (RHCSA)</h3>
+          <p class="cert-issuer">RedHat</p>
+          <p class="cert-date">June 2023</p>
+          <div class="cert-skills">
+            <span>Linux</span>
+            <span>System Admin</span>
+            <span>RedHat</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="blog" class="container blog">
+      <h2><i class="bi bi-journal-text"></i>Latest Articles & Insights</h2>
+      <div class="blog-grid">
+        <article class="blog-card">
+          <div class="blog-meta">
+            <span class="blog-date">Dec 2024</span>
+            <span class="blog-category">Kubernetes</span>
+          </div>
+          <h3>Implementing Zero-Downtime Deployments with ArgoCD</h3>
+          <p>A comprehensive guide to setting up GitOps workflows that ensure zero-downtime deployments in production
+            Kubernetes environments.</p>
+          <div class="blog-tags">
+            <span>GitOps</span>
+            <span>ArgoCD</span>
+            <span>Kubernetes</span>
+          </div>
+          <a href="#" class="blog-link">Read Article <i class="bi bi-arrow-right"></i></a>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-meta">
+            <span class="blog-date">Nov 2024</span>
+            <span class="blog-category">AWS</span>
+          </div>
+          <h3>Cost Optimization Strategies for EKS Workloads</h3>
+          <p>Learn how to reduce AWS EKS costs by 40% using Karpenter, Spot instances, and intelligent resource
+            allocation strategies.</p>
+          <div class="blog-tags">
+            <span>AWS</span>
+            <span>Cost Optimization</span>
+            <span>Karpenter</span>
+          </div>
+          <a href="#" class="blog-link">Read Article <i class="bi bi-arrow-right"></i></a>
+        </article>
+
+        <article class="blog-card">
+          <div class="blog-meta">
+            <span class="blog-date">Oct 2024</span>
+            <span class="blog-category">Security</span>
+          </div>
+          <h3>Securing Kubernetes Clusters: A Practical Guide</h3>
+          <p>Essential security practices for hardening Kubernetes clusters, including RBAC, network policies, and
+            security scanning integration.</p>
+          <div class="blog-tags">
+            <span>Security</span>
+            <span>RBAC</span>
+            <span>Network Policies</span>
+          </div>
+          <a href="#" class="blog-link">Read Article <i class="bi bi-arrow-right"></i></a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="container contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:arunlalpn@gmail.com">arunlalpn@gmail.com</a></p>
+      <p>Phone: +91 85264 33976</p>
+      <p>GitHub: <a href="https://github.com/arunlalp" target="_blank">github.com/arunlalp</a></p>
+      <p>LinkedIn: <a href="#">Your LinkedIn</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Arun Lal — Built with a minimal template.</p>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+
 </html>

@@ -349,6 +349,27 @@ main {
   text-align: center;
 }
 
+.experience-details {
+  text-align: left;
+  margin-top: 1rem;
+}
+
+.experience-details p {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.experience-details p::before {
+  content: "▸";
+  color: var(--accent);
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+}
+
 .about p, .experience p, .projects p, .skills p, .contact p, .education p, .certifications p,
 .about ul, .experience ul, .projects ul, .skills ul, .contact ul, .education ul, .certifications ul,
 .about h2, .experience h2, .projects h2, .skills h2, .contact h2, .education h2, .certifications h2,

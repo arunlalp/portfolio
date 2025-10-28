@@ -460,10 +460,11 @@ main {
 
 .site-footer{
   width: 100%;
+  max-width: var(--content-width);
   background: var(--card);
-  border-radius: 0;
-  padding: 2rem 5%;
-  margin: 2rem 0 0;
+  border-radius: var(--radius);
+  padding: 1.5rem 2rem;
+  margin: 2rem auto 0;
   box-shadow: 0 8px 20px rgba(162,129,100,0.06);
   text-align: center;
   color: var(--muted);

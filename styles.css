@@ -459,10 +459,14 @@ main {
 .project{padding:1rem;border-radius:8px}
 
 .site-footer{
-  padding: 1.25rem 0;
-  color: var(--muted);
+  width: 100%;
+  background: var(--card);
+  border-radius: 0;
+  padding: 2rem 5%;
+  margin: 2rem 0 0;
+  box-shadow: 0 8px 20px rgba(162,129,100,0.06);
   text-align: center;
-  margin-top: auto;
+  color: var(--muted);
 }
 
 @media(min-width:700px){

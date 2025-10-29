@@ -932,6 +932,15 @@ a:hover {
   display: block;
 }
 
+.arch-image {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
 .arch-tech {
   display: flex;
   gap: 0.5rem;

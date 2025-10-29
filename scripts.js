@@ -200,6 +200,50 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
+    // Image Modal functionality
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const modalCaption = document.querySelector('.modal-caption');
+    const closeBtn = document.querySelector('.modal-close');
+
+    // Add click event to all clickable images
+    document.querySelectorAll('.clickable-image').forEach(img => {
+        img.addEventListener('click', () => {
+            modal.classList.add('show');
+            modalImage.src = img.src;
+            modalCaption.textContent = img.alt;
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        });
+    });
+
+    // Close modal when clicking the close button
+    closeBtn.addEventListener('click', closeModal);
+
+    // Close modal when clicking outside the image
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('show')) {
+            closeModal();
+        }
+    });
+
+    function closeModal() {
+        modal.classList.remove('show');
+        modal.classList.add('hide');
+        document.body.style.overflow = ''; // Restore scrolling
+        
+        setTimeout(() => {
+            modal.classList.remove('hide');
+            modal.style.display = 'none';
+        }, 300);
+    }
+
     // Add click tracking for project links (for analytics)
     document.querySelectorAll('.project-link, .blog-link').forEach(link => {
         link.addEventListener('click', (e) => {

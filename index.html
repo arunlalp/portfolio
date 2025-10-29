@@ -541,7 +541,7 @@
             <span class="arch-type">Code Quality Platform</span>
           </div>
           <div class="arch-diagram">
-            <img src="assets/SonarQube Production.png" alt="SonarQube Production Architecture" class="arch-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+            <img src="assets/SonarQube Production.png" alt="SonarQube Production Architecture" class="arch-image clickable-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
             <div class="diagram-placeholder" style="display: none;">
               <i class="bi bi-shield-check"></i>
               <p>SonarQube architecture diagram</p>
@@ -706,6 +706,15 @@
       <p>© <span id="year"></span> Arun Lal. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- Image Modal -->
+  <div id="imageModal" class="image-modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <img id="modalImage" class="modal-image" src="" alt="">
+      <div class="modal-caption"></div>
+    </div>
+  </div>
 
   <script src="scripts.js"></script>
 </body>
